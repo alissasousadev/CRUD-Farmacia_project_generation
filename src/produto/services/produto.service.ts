@@ -17,7 +17,9 @@ export class ProdutoService {
   }
 
   async findAll(): Promise<Produto[]> {
-    return this.produtoRepository.find({ relations: ['categoria'] });
+    return this.produtoRepository.find({ 
+      relations: ['categoria'] 
+    });
   }
 
   async findByNome(nome: string): Promise<Produto[]> {

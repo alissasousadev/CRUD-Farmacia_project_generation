@@ -16,6 +16,6 @@ export class Produto {
   @Column()
   estoque: number;
 
-  @ManyToOne(() => Categoria)
+  @ManyToOne(() => Categoria, categoria => categoria.produtos)
   categoria: Categoria;
 }
