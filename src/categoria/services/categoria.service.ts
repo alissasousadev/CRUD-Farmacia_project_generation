@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { HttpStatus, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository, Like } from 'typeorm';
 import { Categoria } from '../entities/categoria.entity';
@@ -15,12 +15,15 @@ export class CategoriaService {
   }
 
     async findAll(): Promise<Categoria[]> {
-    return this.categoriaRepository.find();
+    return this.categoriaRepository.find({
+      relations: ['produtos'],
+    });
   }
 
     async findById(id: number): Promise<Categoria> {
     const categoria = await this.categoriaRepository.findOne({
       where: { id },
+      relations: ['produtos'],
     });
 
     if (!categoria) {
