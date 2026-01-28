@@ -1,98 +1,151 @@
+<h1 align="center">💊 <br>CRUD Farmácia — NestJS</h1>
+
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+  Este projeto consiste em uma <strong>API RESTful</strong> para gerenciamento de uma <strong>Farmácia</strong>, desenvolvida com <strong>NestJS</strong> e <strong>TypeORM</strong>, permitindo o cadastro, consulta, atualização e remoção de <strong>Categorias</strong> e <strong>Produtos</strong>, com relacionamento entre as entidades. 
+  O projeto foi desenvolvido com fins <strong>educacionais</strong>, aplicando conceitos de <strong>CRUD</strong>, <strong>arquitetura modular</strong>, <strong>relacionamentos entre entidades</strong> e <strong>boas práticas de desenvolvimento backend</strong>.
+
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+<p align="center">
+  <img src="https://img.shields.io/badge/NestJS-Backend-red" />
+  <img src="https://img.shields.io/badge/TypeORM-ORM-blue" />
+  <img src="https://img.shields.io/badge/MySQL-Database-orange" />
+  <img src="https://img.shields.io/badge/Status-Concluído-success" />
 </p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 📌 Visão Geral
 
-## Project setup
+Este projeto representa o desenvolvimento de uma **API RESTful para um Sistema de Farmácia**, permitindo o gerenciamento de **Categorias** e **Produtos**, com relacionamento entre as entidades e validações de regras de negócio.
+
+Desenvolvido durante o **bootcamp da Generation Brasil**, com o objetivo de consolidar conhecimentos em:
+
+- **• NestJS**
+- **• TypeORM**
+- **• Banco de Dados Relacional**
+- **• Arquitetura de APIs REST**
+
+---
+
+## 🧠 Conceitos Aplicados
+
+- ✔ Arquitetura em camadas (**Controller, Service, Entity**)
+- ✔ Relacionamento **OneToMany / ManyToOne**
+- ✔ Relacionamento bidirecional entre entidades
+- ✔ Validações nos métodos **create** e **update**
+- ✔ Busca parcial com **LIKE**
+- ✔ Tratamento de exceções HTTP
+- ✔ Boas práticas de organização de código
+
+---
+
+## 🛠️ Stack Tecnológica
+
+<div align="center">
+  
+| Tecnologia | Descrição |
+|-----------|----------|
+| **TypeScript** | Linguagem principal |
+| **Node.js** | Ambiente de execução |
+| **NestJS** | Framework backend |
+| **TypeORM** | ORM para acesso ao banco |
+| **MySQL** | Banco de dados relacional |
+| **Insomnia** | Testes da API |
+| **Git / GitHub** | Versionamento de código |
+
+</div>
+
+---
+
+## 🏗️ Arquitetura do Projeto
+
+O projeto segue a arquitetura padrão do **NestJS**, separando responsabilidades em camadas bem definidas:
+
+- **Entity** → Representação das tabelas do banco de dados
+- **Service** → Regras de negócio e acesso aos dados
+- **Controller** → Definição das rotas e tratamento das requisições HTTP
+
+Essa abordagem garante maior **organização**, **manutenibilidade** e **escalabilidade** do sistema.
+
+---
+
+## 📊 Diagrama de Classes (UML)
+
+O diagrama abaixo representa o **modelo de classes da aplicação**, evidenciando as entidades
+**Categoria** e **Produto**, além do relacionamento entre elas.
+
+<div align="center">
+  <img src="./docs/uml-classes-farmacia.png" alt="Diagrama de Classes UML - Farmácia" />
+</div>
+
+### 🔗 Relacionamento entre Entidades
+
+- **Categoria** → OneToMany → **Produto**
+- **Produto** → ManyToOne → **Categoria**
+- Relação **bidirecional**
+
+---
+
+## ⚙️ Funcionalidades
+
+<div align="center">
+
+|  Categoria |  Produto |
+|:------------:|:----------:|
+| **POST** `/categoria` <br> Criar categoria | **POST** `/produto` <br> Criar produto |
+| **GET** `/categoria` <br> Listar categorias | **GET** `/produto` <br> Listar produtos |
+| **GET** `/categoria/{id}` <br> Buscar por ID | **GET** `/produto/{id}` <br> Buscar por ID |
+| **GET** `/categoria/nome/{nome}` <br> Buscar por nome (LIKE) | **GET** `/produto/nome/{nome}` <br> Buscar por nome (LIKE) |
+| **PUT** `/categoria` <br> Atualizar categoria | **PUT** `/produto` <br> Atualizar produto |
+| **DELETE** `/categoria/{id}` <br> Remover categoria | **DELETE** `/produto/{id}` <br> Remover produto |
+
+</div>
+
+---
+
+## 🔐 Validações & Regras de Negócio
+
+- ✔ Validação de campos obrigatórios
+- ✔ Verificação de existência antes de **update** e **delete**
+- ✔ Tratamento de exceções com **HTTP Status adequados**
+- ✔ Garantia de relacionamento válido entre Produto e Categoria
+
+---
+
+## 🧪 Testes
+
+Os testes da aplicação foram realizados utilizando o **Insomnia**, validando:
+
+- • CRUD completo de Categoria
+- • CRUD completo de Produto
+- • Relacionamento entre entidades
+- • Validações de regras de negócio
+- • Respostas HTTP corretas
+
+---
+
+## 🚀 Como Executar o Projeto
 
 ```bash
-$ npm install
+# Clonar o repositório
+git clone https://github.com/alissasousadev/CRUD-Farmacia_Generation-Brasil_projeto.git
+
+# Instalar dependências
+npm install
+
+# Executar a aplicação
+npm run start:dev
 ```
 
-## Compile and run the project
+---
 
-```bash
-# development
-$ npm run start
+<div align="center">
+  <p>
+    <em>
+<strong>Projeto desenvolvido com fins educacionais</strong>, no contexto da formação oferecida pela <strong>Generation Brasil</strong>, consistindo na implementação de um <strong>Sistema de Farmácia</strong>, com foco na aplicação dos conceitos de <strong>Programação Orientada a Objetos (POO)</strong>, <strong>arquitetura em camadas</strong> e <strong>desenvolvimento de APIs RESTful</strong>, utilizando boas práticas de organização e estruturação de código.
 
-# watch mode
-$ npm run start:dev
 
-# production mode
-$ npm run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
-```
-
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
-
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+ </em>
+  </p>
+</div>
