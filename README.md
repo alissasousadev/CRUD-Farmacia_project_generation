@@ -15,7 +15,7 @@
 
 ---
 
-## 📌 Visão Geral
+## Visão Geral
 
 Este projeto representa o desenvolvimento de uma **API RESTful para um Sistema de Farmácia**, permitindo o gerenciamento de **Categorias** e **Produtos**, com relacionamento entre as entidades e validações de regras de negócio.
 
@@ -28,7 +28,7 @@ Desenvolvido durante o **bootcamp da Generation Brasil**, com o objetivo de cons
 
 ---
 
-## 🧠 Conceitos Aplicados
+## Conceitos Aplicados
 
 - ✔ Arquitetura em camadas (**Controller, Service, Entity**)
 - ✔ Relacionamento **OneToMany / ManyToOne**
@@ -40,7 +40,7 @@ Desenvolvido durante o **bootcamp da Generation Brasil**, com o objetivo de cons
 
 ---
 
-## 🛠️ Stack Tecnológica
+## Stack Tecnológica
 
 <div align="center">
   
@@ -58,7 +58,7 @@ Desenvolvido durante o **bootcamp da Generation Brasil**, com o objetivo de cons
 
 ---
 
-## 🏗️ Arquitetura do Projeto
+## Arquitetura do Projeto
 
 O projeto segue a arquitetura padrão do **NestJS**, separando responsabilidades em camadas bem definidas:
 
@@ -70,7 +70,7 @@ Essa abordagem garante maior **organização**, **manutenibilidade** e **escalab
 
 ---
 
-## 📊 Diagrama de Classes (UML)
+## Diagrama de Classes (UML)
 
 O diagrama abaixo representa o **modelo de classes da aplicação**, evidenciando as entidades
 **Categoria** e **Produto**, além do relacionamento entre elas.
@@ -79,7 +79,7 @@ O diagrama abaixo representa o **modelo de classes da aplicação**, evidenciand
   <img src="./docs/uml-classes-farmacia.png" alt="Diagrama de Classes UML - Farmácia" />
 </div>
 
-### 🔗 Relacionamento entre Entidades
+### Relacionamento entre Entidades
 
 - **Categoria** → OneToMany → **Produto**
 - **Produto** → ManyToOne → **Categoria**
@@ -87,7 +87,7 @@ O diagrama abaixo representa o **modelo de classes da aplicação**, evidenciand
 
 ---
 
-## ⚙️ Funcionalidades
+## Funcionalidades
 
 <div align="center">
 
@@ -104,7 +104,7 @@ O diagrama abaixo representa o **modelo de classes da aplicação**, evidenciand
 
 ---
 
-## 🔐 Validações & Regras de Negócio
+## Validações & Regras de Negócio
 
 - ✔ Validação de campos obrigatórios
 - ✔ Verificação de existência antes de **update** e **delete**
@@ -113,7 +113,7 @@ O diagrama abaixo representa o **modelo de classes da aplicação**, evidenciand
 
 ---
 
-## 🧪 Testes
+## Testes
 
 Os testes da aplicação foram realizados utilizando o **Insomnia**, validando:
 
@@ -125,7 +125,7 @@ Os testes da aplicação foram realizados utilizando o **Insomnia**, validando:
 
 ---
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto
 
 ```bash
 # Clonar o repositório
