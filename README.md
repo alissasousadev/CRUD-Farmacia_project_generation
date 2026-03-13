@@ -129,7 +129,7 @@ Os testes da aplicação foram realizados utilizando o **Insomnia**, validando:
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/alissasousadev/CRUD-Farmacia_Generation-Brasil_projeto.git
+git clone https://github.com/alissasousadev/pharmacy-management-backend.git
 
 # Instalar dependências
 npm install
